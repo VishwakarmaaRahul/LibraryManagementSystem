@@ -28,8 +28,5 @@ on b.book_id = br.book_id
 where br.borrow_date  >= CURRENT_DATE - INTERVAL 30 DAY;
 
 
-select bk.book_id, bk.title,ba.author_id,CONCAT(a.first_name,' ', a.last_name) as AuthorName 
-from  books bk 
-left join bookauthor ba  on bk.book_id = ba.book_id 
-left join authors a on ba.author_id = a.author_id;
+
 
